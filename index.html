@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media and styling</title>
+    <title>Document</title>
     <style>
-        body{
-            width: 98%;
-            height: calc(100% - 40px);
-            border: 2px solid rgb(3, 3, 3);
-            display: flex;
-            position: absolute;
-            padding: 10px;
-            margin: 10px;
-        }
-        .container{
-            border: 2px solid black;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-        }
-        .simple-box {
-            border:  5px solid red;
-            background: linear-gradient(to right, red,white);
-            width: 200px;
-            height: 100px;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px gray,5px 5px 10px inset grey;
+        .container>div {
+            width: 256px;
+            height: auto;
+            display: inline-block;
+            border: 1px dashed blue;
+            /* visibility: hidden; */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="simple-box">
-
+        <div class="image-png">
+            <img src="./images/computer.png" alt="">
+        </div>
+        <div class="image-svg">
+            <img src="./images/device.svg" alt="">
+        </div>
+        <div>
+            <p>
+                i am having text only
+            </p>
         </div>
     </div>
+
 </body>
+
 </html>
