@@ -1,0 +1,37 @@
+.container div {
+    width: 256px;
+    height: auto;
+    display: inline-block;
+    border: 1px dashed blue;
+    /* visibility: hidden; */
+}
+
+table {
+    display: table;
+    border: 1px solid black;
+
+}
+
+thead {
+    text-transform: capitalize;
+}
+
+td {
+    display: table-cell;
+    border: 1px solid black;
+    min-width: 160px;
+}
+i{
+    width: auto;
+    height: 40px;
+    display: block;
+    
+
+
+}
+.usa{
+    background-image: url(./images/usa.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+

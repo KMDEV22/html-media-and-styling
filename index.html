@@ -4,33 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container>div {
-            width: 256px;
-            height: auto;
-            display: inline-block;
-            border: 1px dashed blue;
-            /* visibility: hidden; */
-        }
-    </style>
+    <title>Media-audio and video</title>
+
 </head>
+<style>
+    body {
+        position: absolute;
+    }
+
+    .audiobox {
+        width: 300px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: flex-end;
+        border: 2px solid;
+
+    }
+
+    img {
+        flex: 1;
+        z-index: 0;
+
+    }
+
+    audio {
+        width: 250px;
+        z-index: 2;
+        /* position: absolute; */
+        align-self: flex-end;
+    }
+    .videobox{
+        display: flex;
+        
+    }
+    video{
+        width:300px ;
+
+    }
+    
+
+</style>
 
 <body>
-    <div class="container">
-        <div class="image-png">
-            <img src="./images/computer.png" alt="">
+    <div class="audios">
+        <div class="audiobox">
+            <img src="./images/ukulele.jpg" alt="">
+            <audio src="./audio/bensound-ukulele.mp3" controls></audio>
         </div>
-        <div class="image-svg">
-            <img src="./images/device.svg" alt="">
+        <div class="audiobox">
+            <img src="./images/hey.jpg" alt="">
+            <audio src="./audio/bensound-hey.mp3" controls autoplay onended="alert('hey was ended')"></audio>
         </div>
-        <div>
-            <p>
-                i am having text only
-            </p>
+        <div class="audiobox">
+            <img src="./images/happyrock.jpg" alt="">
+            <audio src="./audio/bensound-happyrock.mp3" controls onloadeddata=""></audio>
+    
+        </div>
+    
+    </div>
+    <div class="videos">
+        <div class="videobox">
+            <video src="./videos/Globe.mp4" controls></video>
+        </div>
+        <div class="videobox">
+            <video src="./videos/Idea.mp4" controls></video>
         </div>
     </div>
-
+<button onclick="playAllMedia()">Play all media</button>
+    <button onclick="playAllAudio()">Play all audio</button>
+    <script>
+        function playAllAudio() {
+            let audios = document.querySelectorAll('audio')
+            audios.forEach(function (aud) {
+                aud.volume=10%
+                aud.currentTime=1
+                aud.play()
+            })
+        }
+        function playAllMedia(){
+            let medias = document.querySelectorAll('audio,video')
+            // debugger
+            medias.forEach(function (med){
+                med.play()
+            })
+        }
+        
+    </script>
+    
 </body>
 
 </html>
